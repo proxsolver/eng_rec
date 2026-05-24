@@ -1,5 +1,5 @@
 [Unit]
-Description=EBS Radio Recorder
+Description=English Study Recorder
 After=network.target
 
 [Service]

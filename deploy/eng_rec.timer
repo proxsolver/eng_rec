@@ -1,5 +1,5 @@
 [Unit]
-Description=EBS Radio Recorder Timer
+Description=English Study Recorder Timer
 
 [Timer]
 # Easy Writing (05:59 KST = 20:59 UTC)

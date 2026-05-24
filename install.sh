@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# 📻 EBS 라디오 녹음기 — 원클릭 설치
-# 사용법: git clone <repo> && cd ebs-recorder && bash install.sh
+# 📻 영어 학습 녹음기 — 원클릭 설치
+# 사용법: git clone <repo> && cd eng_rec && bash install.sh
 set -e
 
-echo "📻 EBS 라디오 자동 녹음기 설치"
+echo "📻 영어 학습 자동 녹음기 설치"
 echo "================================"
 
 # 필수 확인
@@ -58,11 +58,11 @@ echo "⏰ systemd 타이머 설치? [y/N]"
 read -r ans
 if [ "$ans" = "y" ] || [ "$ans" = "Y" ]; then
     DIR="$(cd "$(dirname "$0")" && pwd)"
-    sed "s|__DIR__|$DIR|g" deploy/ebs-record.service > /tmp/ebs-record.service
-    sudo cp /tmp/ebs-record.service /etc/systemd/system/
-    sudo cp deploy/ebs-record.timer /etc/systemd/system/
+    sed "s|__DIR__|$DIR|g" deploy/eng_rec.service > /tmp/eng_rec.service
+    sudo cp /tmp/eng_rec.service /etc/systemd/system/
+    sudo cp deploy/eng_rec.timer /etc/systemd/system/
     sudo systemctl daemon-reload
-    sudo systemctl enable --now ebs-record.timer
+    sudo systemctl enable --now eng_rec.timer
     echo "✅ 타이머 활성화 완료!"
 fi
 

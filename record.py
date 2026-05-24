@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-EBS 라디오 자동 녹음 및 텔레그램 전송
+영어 학습 자동 녹음 및 텔레그램 전송
 - config.ini 하나로 모든 설정 관리
 """
 import os, sys, subprocess, asyncio, logging
@@ -27,7 +27,7 @@ def load_config(path: str = None) -> dict:
         path = Path(path)
 
     cfg = {'bot_token': '', 'chat_id': '', 'recordings_dir': Path('./recordings'),
-           'streams': {'EBS': '', 'BANDI': ''}, 'programs': []}
+           'streams': {'FM': '', 'AOD': ''}, 'programs': []}
 
     in_schedule = False
     for line in path.read_text(encoding='utf-8').splitlines():
@@ -55,7 +55,7 @@ def load_config(path: str = None) -> dict:
                     'end': parts[2],
                     'days': parts[3],
                     'type': parts[4],     # 정규 / 재방송
-                    'source': parts[5],   # EBS / BANDI
+                    'source': parts[5],   # FM / AOD
                 })
             continue
 
@@ -72,10 +72,10 @@ def load_config(path: str = None) -> dict:
             cfg['chat_id'] = val
         elif key == 'recordings_dir':
             cfg['recordings_dir'] = Path(val)
-        elif key == 'ebs_fm':
-            cfg['streams']['EBS'] = val
-        elif key == 'bandi':
-            cfg['streams']['BANDI'] = val
+        elif key == 'fm_stream':
+            cfg['streams']['FM'] = val
+        elif key == 'aod_stream':
+            cfg['streams']['AOD'] = val
 
     return cfg
 
