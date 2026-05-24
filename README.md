@@ -8,7 +8,7 @@
 
 ## 크레딧
 
-본 프로젝트는 [지냥이🦊](https://github.com/proxsolver)가 작성한 소스코드를 기반으로 합니다.
+본 프로젝트는 [yoonbae81/radio](https://github.com/yoonbae81/radio)의 아이디어에서 영감을 받아\n[지냥이🦊](https://github.com/proxsolver)가 처음부터 새로 작성했습니다.
 
 ## 빠른 시작
 
