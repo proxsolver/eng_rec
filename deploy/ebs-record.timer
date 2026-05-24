@@ -1,0 +1,18 @@
+[Unit]
+Description=EBS Radio Recorder Timer
+
+[Timer]
+# Easy Writing (05:59 KST = 20:59 UTC)
+OnCalendar=*-*-* 20:59:00 UTC
+# 입이 트이는 영어 (06:20 KST = 21:20 UTC)
+OnCalendar=*-*-* 21:20:00 UTC
+# 모닝스페셜 (08:00 KST = 23:00 UTC)
+OnCalendar=*-*-* 23:00:00 UTC
+# Easy Writing 재방송 (09:00 KST = 00:00 UTC)
+OnCalendar=*-*-* 00:00:00 UTC
+# 입이 트이는 영어 재방송 (09:20 KST = 00:20 UTC)
+OnCalendar=*-*-* 00:20:00 UTC
+Persistent=true
+
+[Install]
+WantedBy=timers.target

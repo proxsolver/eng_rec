@@ -1,0 +1,15 @@
+# 녹음 파일
+recordings/
+*.mp3
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# 실제 설정 (토큰 포함 — GitHub에 올리지 않음)
+# 처음 설치 시: config.ini.example 을 config.ini 로 복사 후 수정
+config.ini

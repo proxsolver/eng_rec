@@ -1,0 +1,12 @@
+[Unit]
+Description=EBS Radio Recorder
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=__DIR__
+ExecStart=__DIR__/.venv/bin/python __DIR__/record.py
+Environment=PATH=__DIR__/.venv/bin:/usr/local/bin:/usr/bin
+
+[Install]
+WantedBy=multi-user.target
