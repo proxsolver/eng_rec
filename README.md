@@ -1,6 +1,14 @@
 # 📻 영어 학습 자동 녹음기
 
+> **⚠️ 본 프로젝트는 개인의 학습 목적으로만 사용해야 합니다.**
+> 녹음된 콘텐츠의 저작권은 원 방송사에 귀속됩니다.
+> 녹음 파일의 상업적 배포, 공유, 재판매는 엄격히 금지됩니다.
+
 `config.ini` 하나만 수정하면 바로 사용 가능합니다.
+
+## 크레딧
+
+본 프로젝트는 [지냥이🦊](https://github.com/proxsolver)가 작성한 소스코드를 기반으로 합니다.
 
 ## 빠른 시작
 
@@ -62,6 +70,7 @@ eng_rec/
 ├── config.ini.example  ← 템플릿 (GitHub에 올라감)
 ├── record.py           ← 메인 로직
 ├── install.sh          ← 설치 스크립트
+├── LICENSE             ← 라이선스 (개인 학습 목적만)
 ├── deploy/             ← systemd 파일
 └── recordings/         ← 녹음 파일
 ```
@@ -70,7 +79,7 @@ eng_rec/
 
 ```bash
 .venv/bin/python record.py                  # 수동 실행
-sudo journalctl -u eng_rec.service -f    # 로그
+sudo journalctl -u eng_rec.service -f       # 로그
 ```
 
 ## 요구사항
@@ -78,3 +87,10 @@ sudo journalctl -u eng_rec.service -f    # 로그
 - Linux (Ubuntu 20.04+, Amazon Linux 2023)
 - Python 3.9+
 - ffmpeg
+
+## ⚠️ 주의사항
+
+- 녹음된 모든 콘텐츠는 **개인 학습 목적으로만** 사용하세요
+- 녹음 파일을 **타인에게 공유, 배포, 판매하지 마세요**
+- 저작권은 원 콘텐츠 제작자/방송사에 있습니다
+- 본 도구의 오용으로 발생하는 법적 책임은 사용자에게 있습니다
